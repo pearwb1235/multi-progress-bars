@@ -140,6 +140,7 @@ dist
 
 # Develop File
 .husky
+examples
 src
 .babelrc.json
 .eslintrc.json
