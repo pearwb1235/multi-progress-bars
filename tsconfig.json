@@ -5,6 +5,7 @@
     "downlevelIteration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "outDir": "dist",
     "paths": {
       "~/*": ["./src/*"],

@@ -8,5 +8,6 @@
     "allowJs": false,
     "emitDeclarationOnly": true
   },
-  "exclude": ["dist", "node_modules", "**/*.test.ts"]
+  "include": ["src"],
+  "exclude": ["__tests__", "**/*.test.ts"]
 }
