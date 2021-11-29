@@ -139,7 +139,7 @@ export class VirtualConsole {
   }
 
   getOutStringTop(bufferStartIndex: number, topLines: string[]): string {
-    return [
+    let outString = [
       topLines.map((val) => val + EL(EL_MODE.TO_END)).join("\n"), // Popped lines
       this.topBorder === undefined // Top border or null
         ? null
@@ -160,6 +160,8 @@ export class VirtualConsole {
         return v !== undefined && v !== "" && v !== null; // Remove falsey/empty values
       })
       .join("\n"); // Join with newlines
+    if (this.consoleBuffer.length === 0) outString += ED(ED_MODE.TO_END);
+    return outString;
   }
 
   getOutStringBottom(bufferStartIndex: number, topLines: string[]): string {
