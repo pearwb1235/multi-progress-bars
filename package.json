@@ -1,6 +1,6 @@
 {
   "name": "@pearwb-fork/multi-progress-bars",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Multiple progress bars with option for indefinite spinners",
   "main": "dist/index.js",
   "scripts": {

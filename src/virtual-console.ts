@@ -112,8 +112,10 @@ export class VirtualConsole {
   done(): void {
     if (this.progressBuffer.length > this.height) {
       this.dumpProgressBuffer();
-    } else {
+    } else if (this.consoleBuffer.length > 0) {
       this.stream?.write("\x1b[0m\n");
+    } else {
+      this.stream?.write("\x1b[0m");
     }
     console = this.originalConsole;
     this.originalConsole = null;
